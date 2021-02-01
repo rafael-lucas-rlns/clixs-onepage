@@ -161,16 +161,19 @@ header {
 	background-color: var(--white);
 	justify-content: space-between;
 	box-shadow: 0px 3px 13px #664FFC1D;
+	z-index: 1;
 	}
 	nav a {
-		margin: 1.3em
+		margin: 1.3em;
+		transition: color 1s ease;
+
 		} nav a.active {
 			color: var(--f_color);
 			font-weight: bold;
 			}
 
 	submenu {
-		display: none;
+		display: flex;
 		position: fixed;
 		top: 80px;
 		left: 0;
@@ -178,8 +181,15 @@ header {
 		background-color: var(--white);
 		padding: 68px calc(34px + 5%);
 		box-shadow: 0px 3px 21px #5742FB39;
+
+		opacity: 0;
+		visibility: hidden;
+		transition: visibility 0s 0.6s, opacity 0.55s ease;
 		} submenu.active {
-			display: flex;
+			visibility: visible;
+			opacity: 1;
+
+			transition: opacity 0.55s ease;
 			}
 
 		submenu > * {
@@ -302,26 +312,29 @@ header {
 
 	.blog_posts {
 		display: grid;
-		grid-template-columns: repeat(auto-fill, 377px);
+		grid-template-columns: repeat(auto-fill, 356px);
 		grid-gap: 21px;
 		justify-content: center;
 		margin: 2em auto;
 		padding: 0;
+		
 		} .blog_posts > * {
 			display: block;
 			overflow: hidden;
 			box-shadow: 0px 0px 20px #7542FC2F;
 
-		} .blog_posts > *
-			, .blog_posts .img {
-				border-radius: 13px;
+		} .blog_posts > * {
+			border-radius: 13px;
+		
+		} .blog_posts .img {
+			border-radius: 13px 13px 0 0;
 			}
 
 		.blog_posts .img {
 			background-position: center;
 			background-repeat: no-repeat;
 			background-size: cover;
-			height: 144px;
+			height: 178px;
 			}
 
 .subscribe {
@@ -338,14 +351,15 @@ header {
 		}
 	
 	.subscribe form {
-		margin: auto 0;
+		margin: auto 0 auto 55px;
 		position: relative;
 		} .subscribe form input
-			,	.subscribe form label i {
+			,	.subscribe form label {
 				border-radius: 3px;
 			}
 
 		.subscribe form input[type="email"] {
+			display: inline-block;
 			height: 55px;
 			width: 377px;
 			box-shadow: 0px 3px 20px #00000040;
@@ -355,7 +369,8 @@ header {
 		.subscribe form label[for="submit"] {
 			padding: 13px;
 			cursor: pointer;
-			margin-left: -56px;
+			margin-left: -50px;
+			
 			}
 			.subscribe form label[for="submit"] i {
     		transform: translateX(-13%) rotate(90deg);
