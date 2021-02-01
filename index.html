@@ -3,10 +3,320 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+	<title>Clixs</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins" />
+	<link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+
+	<link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
 	<link rel="stylesheet" href="./css/default.css">
 </head>
 <body>
-	hello world
+	<header class="pad-content">
+		<img src="./img/logo.png" alt="clixs" height="68%">
+		
+		<nav>
+			<a href="js:void(0)" onclick="document.getElementById('produtos').classList.toggle('active'); this.classList.toggle('active');">produtos</a>
+			<a href="">suporte</a>
+			<a href="">novidades</a>
+			<a class="button f_color" href="">fale conosco</a>
+		</nav>
+
+		<submenu id="produtos" class="txt-sm">
+			<a href="">
+				<i class="las la-mouse-pointer la-lg f_color txt-md"><span class="b_color">clix</span>site</i>
+				<p>Sites profissionais e personalizados</p>
+			</a>
+
+			<a href="">
+				<i class="las la-shopping-bag la-lg s_color txt-md"><span class="b_color">clix</span>shop</i>
+				<p>Loja virtual catálogo de produtos e aplicativo de vendas</p>
+			</a>
+
+			<a href="">
+				<i class="las la-play-circle la-lg tw_color txt-md"><span class="b_color">clixs</span>play</i>
+				<p>Plataforma ensino a distância e transmissão ao vivo</p>
+			</a>
+
+			<a href="">
+				<i class="las la-play-circle la-lg r_color txt-md"><span class="b_color">clixs</span>home</i>
+				<p>Site integrado com sistema para gerenciamento de imobiliárias</p>
+			</a>
+		</submenu>
+	</header>
+	
+	<main>
+		<section>
+			<div class="xl-card fst-card pad-content">
+				<div class="info-content">
+					<h1 class="f_color">Chegou a hora de ter o <strong>seu negócio na internet</strong></h1>
+
+					<p class="txt-sm">tudo o que você precisa para ter o seu próprio site, loja virtual, 
+					plataforma EAD ou plataforma para imobiliária de forma simplificada e profissional.</p>
+
+					<a class="button t2 bg_s_color w_color" href="">eu quero!</a>
+				</div>
+
+				<div class="illustr-content">
+					<img src="./img/illustr_girl.png" alt="">
+				</div>
+			</div>
+
+			<div class="xl-card">
+				<div class="info-content pad-content">
+					<h2 class="f_color"><strong>Soluções customizáveis e conectadas</strong> para atender as necessidades da <strong>sua empresa</strong>
+					</h2>
+
+					<p class="txt-sm">Potencialize seu negócio na internet com soluções estratégicas, conectadas e versáteis.</p>
+
+					<a class="button t2 bg_s_color w_color" href="">fale com especialista</a>
+				</div>
+
+				<div class="illustr-content">
+					<img src="./img/illustr_solucoes.png" alt="">
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<div class="xl-card snd-card" style="background: transparent linear-gradient(119deg, #C400FF 0%, #7542FC 100%);">
+				<div class="info-content pad-content">
+					<img class="logo" src="./img/logo_clixsite.png" alt="">
+
+					<h2 class="w_color">
+						Criação profissional de <strong>sites personalizados</strong> para cada negócio
+					</h2>
+
+					<p class="txt-sm w_color">
+						Seu site com layout e desenvolvimento feito por especialistas, customizado para melhorar a sua presença digital.
+					</p>
+
+					<a class="button t2 bg_t_color w_color" href="">saiba mais</a>
+				</div>
+
+				<div class="illustr-content">
+					<img src="./img/illustr_clixsite.png" alt="">
+				</div>
+			</div>
+
+			<div class="xl-card snd-card" style="background: transparent linear-gradient(241deg, #7542FC 0%, #525FFA 47%, #04A2F8 100%)">
+				<div class="info-content pad-content">
+					<img class="logo" src="./img/logo_clixshop.png" alt="">
+
+					<h2 class="w_color">
+						<strong>Loja online</strong> impactante e de alta performance para <strong>vender muito mais</strong>
+					</h2>
+
+					<p class="txt-sm w_color">
+						Crie sua loja virtual, aplicativo de vendas e catálogo interativo e gerencie suas vendas em um só lugar: a Clixshop.
+					</p>
+
+					<a class="button t2 bg_f_color w_color" href="">saiba mais</a>
+				</div>
+
+				<div class="illustr-content">
+					<img src="./img/illustr_clixshop.png" alt="">
+				</div>
+			</div>
+
+			<div class="xl-card snd-card" style="background: transparent linear-gradient(295deg, #00FFCE 0%, #FF00FF 100%)">
+				<div class="info-content pad-content">
+					<img class="logo" src="./img/logo_clixsplay.png" alt="">
+
+					<h2 class="w_color">
+						Plataforma inteligente de <strong>ensino a distância e transmissão ao vivo</strong>
+					</h2>
+
+					<p class="txt-sm w_color">
+						Seu site com layout e desenvolvimento feito por especialistas, customizado para melhorar a sua presença digital.
+					</p>
+
+					<a class="button t2 bg_f_color w_color" href="">saiba mais</a>
+				</div>
+
+				<div class="illustr-content">
+					<img src="./img/illustr_clixsplay.png" alt="">
+				</div>
+			</div>
+
+			<div class="xl-card snd-card" style="background: transparent linear-gradient(117deg, #6124FB 0%, #BA5780 51%, #FD7E23 100%)">
+				<div class="info-content pad-content">
+					<img class="logo" src="./img/logo_clixshome.png" alt="">
+
+					<h2 class="w_color">
+						Site para <strong>imobiliárias e corretores</strong> com <strong>sistema integrado</strong>
+					</h2>
+
+					<p class="txt-sm w_color">
+						Tenha um site personalizado para a sua imobiliária com sistema integrado para gerenciar e anunciar imóveis de forma prática.
+					</p>
+
+					<a class="button t2 bg_t_color w_color" href="">saiba mais</a>
+				</div>
+
+				<div class="illustr-content">
+					<img src="./img/illustr_clixshome.png" alt="">
+				</div>
+			</div>
+
+			<div class="xl-card fst-card bgB">
+				<div class="info-content pad-content">
+					<h2 class="f_color">
+						<strong>Atendimento humanizado</strong> e <strong>suporte constante</strong>
+					</h2>
+
+					<p class="txt-sm">
+						Conte sempre com nossos especialistas para solucionar suas dúvidas técnicas e garantir que seu site, loja ou plataforma funcione o tempo todo, sem enrolação.
+					</p>
+				</div>
+
+				<div class="illustr-content">
+					<img src="./img/illustr_atendimento.png" alt="">
+				</div>
+			</div>
+		</section>
+
+		<section class="blog_news pad-content">
+			<h3 class="f_color"><b>Novidades</b></h3>
+
+			<ul class="blog_posts">
+				<li>
+					<div class="img" style="background-image: url('./img/blog_demo_img.jpg');"></div>
+					<h5 class="f_color">Lorem ipsum.</h5>
+					<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam.</p>
+				</li>
+
+				<li>
+					<div class="img" style="background-image: url('./img/blog_demo_img.jpg');"></div>
+					<h5 class="f_color">Lorem ipsum.</h5>
+					<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam.</p>
+				</li>
+
+				<li>
+					<div class="img" style="background-image: url('./img/blog_demo_img.jpg');"></div>
+					<h5 class="f_color">Lorem ipsum.</h5>
+					<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam.</p>
+				</li>
+			</ul>
+
+			<a href=""><i class="las la-plus-circle r_color margin_R8"></i><b>Ver Tudo</b></a>
+		</section>
+
+		<section class="subscribe pad-content" style="background: transparent linear-gradient(99deg, #C400FF 0%, #04A2F8 100%)">
+			<h3 class="w_color">Receba gratuitamente <strong>conteúdos exclusivos</strong> para <strong>potencializar sua presença digital.</strong></h3>
+			
+			<form action="" method="post">
+				<input type="email" placeholder="exemplo@gmail.com">
+
+				<label class="bg_f_color" for="submit">
+					<i class="las la-location-arrow la-lg w_color" style="margin: auto"></i>
+					<input id="submit" type="submit" style="display: none">
+				</label>
+			</form>
+		</section>
+
+		<section id="fale_conosco" class="xl-card pad-content">
+			<div class="info-content">
+				<h2 class="f_color"><b>Potencialize já o seu sucesso e presença digital</b></h2>
+				
+				<p>Preencha o formulário e um de nossos especialistas vão entrar em contato com você.</p>
+				
+				<p>Se preferir, mande uma mensagem no nosso <b>WhatsApp</b> ou ligue nos números abaixo:</p>
+				
+				<div class="d-flex ">
+					<a class="f1" href=""><i class="lab la-whatsapp la-2x f_color"></i>(11) 93043-3311</a>
+					
+					<a class="f1" href=""><i class="lab la-whatsapp la-2x f_color"></i>(11) 93454-3311</a>
+				</div>
+			</div>
+
+			<div class="form-content">
+				<form action="" method="post">
+					<label>
+						Nome Completo *
+					  <input type="text" name="fullname" placeholder="Nome Completo">
+					</label>
+
+					<label>
+						E-mail *
+						<input type="email" name="email" placeholder="E-mail">
+					</label>
+
+					<label>
+						Telefone ou Celular *
+						<input type="phone" name="phone" placeholder="Telefone">
+					</label>
+
+					<label>
+						Segmento de atuação *
+						<input type="text" name="segment" placeholder="Segmento de atuação">
+					</label>
+					
+					<label>
+						O que você precisa? *
+						<input list="whatneed" name="whatneed" placeholder="Escolher">
+						
+						<datalist id="whatneed">
+							<option value="Definir">
+							<option value="Definir">
+							<option value="Definir">
+							<option value="Definir">
+							<option value="Definir">
+						</datalist>
+					</label>
+
+					<label>
+						Qual é a melhor forma de contato? *
+						<input list="bestcontact" name="bestcontact" placeholder="Escolher">
+						
+						<datalist id="bestcontact">
+							<option value="E-mail">
+							<option value="Telefone ou Celular">
+							<option value="Whatsapp">
+						</datalist>
+					</label>
+
+					<label>* Campos obrigatórios</label>
+
+					<label class="submit" for="">
+						<button class="button t2 w_color bg_f_color" type="submit" value="Submit">Enviar</button>
+					</label>
+				</form>
+			</div>
+		</section>
+	</main>
+
+	<footer>
+		<div class="socialmidia pad-content">
+			<a class="lab la-instagram la-2x" href="" style="color: #FF00D8"></a>
+			<a class="lab la-facebook-f la-2x" href="" style="color: #0085E6"></a>
+			<a class="lab la-linkedin-in la-2x" href="" style="color: #1075B4"></a>
+		</div>
+		
+		<div class="contato pad-content w_color">
+			<div class="f4" style="margin-top: -55px">
+				<h4>FALE CONOSCO</h4>
+				<a href="">contato@clixs.com.br</a>
+				<a href="">(11) 93043-3311</a>
+				<a href="">(11) 93454-3311</a>
+
+				<div class="parceiros">
+					<img src="./img/logo_google.png" alt="" style="height: 42px">
+					<img src="./img/logo_caasp.png" alt="">
+					<img src="./img/logo_ecommerce.png" alt="" style="height: 34px">
+					<img src="./img/logo_sebrae.png" alt="">
+					<img src="./img/logo_abcomm.png" alt="">
+				</div>
+			</div>
+
+			<div class="f1">
+				<div class="facebook" style="background-color: lightgray; width: 163px; height: 163px"></div>
+				
+				<img src="./img/logo_vibryt.png" style="margin-left: 0" alt="">
+			</div>
+		</div>
+
+		<div class="notes pad-content">© Copyright 2021 <b>Clixs</b> - Todos os Direitos Reservados</div>
+	</footer>
 </body>
 </html>
