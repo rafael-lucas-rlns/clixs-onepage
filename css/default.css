@@ -210,6 +210,7 @@ header {
 
 .xl-card {
 	display: flex;
+	position: relative;
 	height: calc(100vh - 80px);
 	align-items: center;
 	
@@ -317,7 +318,7 @@ header {
 		justify-content: center;
 		margin: 2em auto;
 		padding: 0;
-		
+
 		} .blog_posts > * {
 			display: block;
 			overflow: hidden;
@@ -369,12 +370,12 @@ header {
 		.subscribe form label[for="submit"] {
 			padding: 13px;
 			cursor: pointer;
-			margin-left: -50px;
+			margin-left: -52px;
 			
-			}
-			.subscribe form label[for="submit"] i {
-    		transform: translateX(-13%) rotate(90deg);
+			} .la-custon-location-arrow:before {
+				content: "\27A4";
 				}
+			 
 			
 footer {
 	}
@@ -438,3 +439,9 @@ footer {
 		padding-top: 21px;
 		padding-bottom: 21px;
 		}
+
+.i-decoration {
+	position: absolute;
+	height: 89px;
+	width: auto;
+	}
