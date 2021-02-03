@@ -1,21 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
 	<title>Clixs</title>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans" />
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins" />
+	<link rel="shortcut icon" href="https://www.clixs.com.br/images/favicon.ico">
+
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;1,700;800&display=swap" rel="stylesheet">
+	
 	<link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
 
 	<link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
 	<link rel="stylesheet" href="./css/default.css">
+	<link rel="stylesheet" href="./css/mobile.css">
 </head>
 <body>
 	<header class="pad-content">
-		<a class="logo" href="./index.html"><img src="./img/logo.png" alt="clixs" height="68%"></a>
+		<a class="logo" href="./index.html">
+			<img src="./img/logo.png" alt="clixs" height="100%">
+		</a>
 		
-		<nav>
+		<a class="i-menu-mobile" href="js:void(0)" onclick="
+			document.getElementById('menu-mobile').classList.toggle('visible');
+			document.querySelector('#menu-mobile > :first-child').classList.remove('active'); 
+			document.getElementById('produtos').classList.remove('active'); 
+		">
+			<i class="las la-bars la-lg"></i>
+		</a>
+		<nav id="menu-mobile">
 			<a href="js:void(0)" onclick="document.getElementById('produtos').classList.toggle('active'); this.classList.toggle('active');">produtos</a>
 			<a href="#suporte">suporte</a>
 			<a href="#novidades">novidades</a>
@@ -48,38 +63,45 @@
 	<main>
 		<section>
 			<div class="xl-card fst-card pad-content">
-				<div class="info-content">
+				<div class="info-content">				
 					<h1 class="f_color">Chegou a hora de ter o <strong>seu negócio na internet</strong></h1>
 
-					<p class="txt-sm">tudo o que você precisa para ter o seu próprio site, loja virtual, 
+					<p>Tudo o que você precisa para ter o seu próprio site, loja virtual, 
 					plataforma EAD ou plataforma para imobiliária de forma simplificada e profissional.</p>
 
-					<a class="button t2 bg_s_color w_color" href="">eu quero!</a>
+					<a class="button t2 bg_s_color w_color" href="">EU QUERO!</a>
 				</div>
 
 				<div class="illustr-content">
-					<img src="./img/illustr_girl.png" alt="">
+					<img class="i-bg" src="./img/illustr_girl.png" alt="">
+					
+					<img class="i-decoration" src="./img/circle_decoration.png" alt="" style="
+						top: 8vh;
+						left: 3vw;
+					">
+
+					<img class="i-decoration" src="./img/square_decoration.png" alt="" style="
+						bottom: 3vh;
+						right: 0vw;
+					">
 				</div>
 
-				<img class="i-decoration" src="./img/circle_decoration.png" alt="" style="
-					top: 8vh;
-					left: 45vw;
-				">
-
 				<img class="i-decoration" src="./img/square_decoration.png" alt="" style="
-					bottom: 8vh;
-					right: 5vw;
+					top: 16vh;
+					left: -1vw;
 				">
 			</div>
 
 			<div class="xl-card">
-				<div class="info-content pad-content">
-					<h2 class="f_color"><strong>Soluções customizáveis e conectadas</strong> para atender as necessidades da <strong>sua empresa</strong>
-					</h2>
+				<div class="info-content pad-R-2x">
+					<div>
+						<h2 class="f_color"><strong>Soluções customizáveis e conectadas</strong> para atender as necessidades da <strong>sua empresa</strong>
+						</h2>
 
-					<p class="txt-sm">Potencialize seu negócio na internet com soluções estratégicas, conectadas e versáteis.</p>
+						<p>Potencialize seu negócio na internet com soluções estratégicas, conectadas e versáteis.</p>
 
-					<a class="button t2 bg_s_color w_color" href="">fale com especialista</a>
+						<a class="button t2 bg_s_color w_color" href="">FALE COM ESPECIALISTA</a>
+					</div>
 				</div>
 
 				<div class="illustr-content">
@@ -97,11 +119,11 @@
 						Criação profissional de <strong>sites personalizados</strong> para cada negócio
 					</h2>
 
-					<p class="txt-sm w_color">
+					<p class="w_color">
 						Seu site com layout e desenvolvimento feito por especialistas, customizado para melhorar a sua presença digital.
 					</p>
 
-					<a class="button t2 bg_t_color w_color" href="">saiba mais</a>
+					<a class="button t2 bg_t_color w_color" href="">SAIBA MAIS</a>
 				</div>
 
 				<div class="illustr-content">
@@ -117,11 +139,11 @@
 						<strong>Loja online</strong> impactante e de alta performance para <strong>vender muito mais</strong>
 					</h2>
 
-					<p class="txt-sm w_color">
+					<p class="w_color">
 						Crie sua loja virtual, aplicativo de vendas e catálogo interativo e gerencie suas vendas em um só lugar: a Clixshop.
 					</p>
 
-					<a class="button t2 bg_f_color w_color" href="">saiba mais</a>
+					<a class="button t2 bg_f_color w_color" href="">SAIBA MAIS</a>
 				</div>
 
 				<div class="illustr-content">
@@ -137,11 +159,11 @@
 						Plataforma inteligente de <strong>ensino a distância e transmissão ao vivo</strong>
 					</h2>
 
-					<p class="txt-sm w_color">
+					<p class="w_color">
 						Seu site com layout e desenvolvimento feito por especialistas, customizado para melhorar a sua presença digital.
 					</p>
 
-					<a class="button t2 bg_f_color w_color" href="">saiba mais</a>
+					<a class="button t2 bg_f_color w_color" href="">SAIBA MAIS</a>
 				</div>
 
 				<div class="illustr-content">
@@ -157,42 +179,41 @@
 						Site para <strong>imobiliárias e corretores</strong> com <strong>sistema integrado</strong>
 					</h2>
 
-					<p class="txt-sm w_color">
+					<p class="w_color">
 						Tenha um site personalizado para a sua imobiliária com sistema integrado para gerenciar e anunciar imóveis de forma prática.
 					</p>
 
-					<a class="button t2 bg_t_color w_color" href="">saiba mais</a>
+					<a class="button t2 bg_t_color w_color" href="">SAIBA MAIS</a>
 				</div>
 
 				<div class="illustr-content">
 					<img src="./img/illustr_clixshome.png" alt="">
 				</div>
 			</div>
+		</section>
 
-			<div id="suporte" class="xl-card fst-card bgB">
-				<div class="info-content pad-content">
+		<section>
+			<div id="suporte" class="xl-card fst-card bgB pad-content">
+				<div class="info-content">
 					<h2 class="f_color">
 						<strong>Atendimento humanizado</strong> e <strong>suporte constante</strong>
 					</h2>
 
-					<p class="txt-sm">
+					<p>
 						Conte sempre com nossos especialistas para solucionar suas dúvidas técnicas e garantir que seu site, loja ou plataforma funcione o tempo todo, sem enrolação.
 					</p>
 				</div>
 
 				<div class="illustr-content">
 					<img src="./img/illustr_atendimento.png" alt="">
+
+					<img class="i-decoration D D-mobile" src="./img/circle_decoration.png" alt="">
+
+					<img class="i-decoration" src="./img/square_decoration.png" alt="" style="
+						bottom: 3vh;
+						right: 0vw;
+					">
 				</div>
-
-				<img class="i-decoration" src="./img/circle_decoration.png" alt="" style="
-					top: 13vh;
-					left: 39vw;
-				">
-
-				<img class="i-decoration" src="./img/square_decoration.png" alt="" style="
-					bottom: 8vh;
-					right: 13vw;
-				">
 			</div>
 		</section>
 
@@ -202,24 +223,24 @@
 			<ul class="blog_posts">
 				<li>
 					<div class="img" style="background-image: url('./img/blog_demo_img.jpg');"></div>
-					<h5 class="f_color">Lorem ipsum.</h5>
+					<h4 class="f_color">Lorem ipsum.</h4>
 					<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam.</p>
 				</li>
 
 				<li>
 					<div class="img" style="background-image: url('./img/blog_demo_img.jpg');"></div>
-					<h5 class="f_color">Lorem ipsum.</h5>
+					<h4 class="f_color">Lorem ipsum.</h4>
 					<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam.</p>
 				</li>
 
 				<li>
 					<div class="img" style="background-image: url('./img/blog_demo_img.jpg');"></div>
-					<h5 class="f_color">Lorem ipsum.</h5>
+					<h4 class="f_color">Lorem ipsum.</h4>
 					<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam.</p>
 				</li>
 			</ul>
 
-			<a href=""><i class="las la-plus-circle r_color margin_R8"></i><b>Ver Tudo</b></a>
+			<a href=""><i class="las la-plus-circle s_color margin_R8"></i><b>Ver Tudo</b></a>
 		</section>
 
 		<section class="subscribe pad-content" style="background: transparent linear-gradient(99deg, #C400FF 0%, #04A2F8 100%)">
@@ -235,73 +256,75 @@
 			</form>
 		</section>
 
-		<section id="fale_conosco" class="xl-card pad-content">
-			<div class="info-content">
-				<h2 class="f_color"><b>Potencialize já o seu sucesso e presença digital</b></h2>
-				
-				<p>Preencha o formulário e um de nossos especialistas vão entrar em contato com você.</p>
-				
-				<p>Se preferir, mande uma mensagem no nosso <b>WhatsApp</b> ou ligue nos números abaixo:</p>
-				
-				<div class="d-flex ">
-					<a class="f1" href="https://api.whatsapp.com/send?phone=5511930433311" target="_blank"><i class="lab la-whatsapp la-2x f_color"></i>(11) 93043-3311</a>
+		<section >
+			<div id="fale_conosco" class="xl-card pad-content">
+				<div class="info-content pad-R">
+					<h2 class="f_color"><b>Potencialize já o seu sucesso e presença digital</b></h2>
 					
-					<a class="f1" href="https://api.whatsapp.com/send?phone=5511934543311" target="_blank"><i class="lab la-whatsapp la-2x f_color"></i>(11) 93454-3311</a>
+					<p>Preencha o formulário e um de nossos especialistas vão entrar em contato com você.</p>
+					
+					<p>Se preferir, mande uma mensagem no nosso <b>WhatsApp</b> ou ligue nos números abaixo:</p>
+					
+					<div class="d-flex">
+						<a class="f1" href="https://api.whatsapp.com/send?phone=5511930433311" target="_blank"><i class="lab la-whatsapp la-2x f_color"></i>(11) 93043-3311</a>
+						
+						<a class="f1" href="https://api.whatsapp.com/send?phone=5511934543311" target="_blank"><i class="lab la-whatsapp la-2x f_color"></i>(11) 93454-3311</a>
+					</div>
 				</div>
-			</div>
 
-			<div class="form-content">
-				<form action="" method="post">
-					<label>
-						Nome Completo *
-					  <input type="text" name="fullname" placeholder="Nome Completo">
-					</label>
+				<div class="form-content">
+					<form action="" method="post">
+						<label>
+							Nome Completo *
+							<input type="text" name="fullname" placeholder="Nome Completo">
+						</label>
 
-					<label>
-						E-mail *
-						<input type="email" name="email" placeholder="E-mail">
-					</label>
+						<label>
+							E-mail *
+							<input type="email" name="email" placeholder="E-mail">
+						</label>
 
-					<label>
-						Telefone ou Celular *
-						<input type="phone" name="phone" placeholder="Telefone">
-					</label>
+						<label>
+							Telefone ou Celular *
+							<input type="tel" name="phone" placeholder="Telefone" style="font-weight: bold;">
+						</label>
 
-					<label>
-						Segmento de atuação *
-						<input type="text" name="segment" placeholder="Segmento de atuação">
-					</label>
-					
-					<label>
-						O que você precisa? *
-						<input list="whatneed" name="whatneed" placeholder="Escolher">
+						<label>
+							Segmento de atuação *
+							<input type="text" name="segment" placeholder="Segmento de atuação">
+						</label>
 						
-						<datalist id="whatneed">
-							<option value="Definir">
-							<option value="Definir">
-							<option value="Definir">
-							<option value="Definir">
-							<option value="Definir">
-						</datalist>
-					</label>
+						<label>
+							O que você precisa? *
+							<input list="whatneed" name="whatneed" placeholder="Escolher">
+							
+							<datalist id="whatneed">
+								<option value="Definir">
+								<option value="Definir">
+								<option value="Definir">
+								<option value="Definir">
+								<option value="Definir">
+							</datalist>
+						</label>
 
-					<label>
-						Qual é a melhor forma de contato? *
-						<input list="bestcontact" name="bestcontact" placeholder="Escolher">
-						
-						<datalist id="bestcontact">
-							<option value="E-mail">
-							<option value="Telefone ou Celular">
-							<option value="Whatsapp">
-						</datalist>
-					</label>
+						<label>
+							Qual é a melhor forma de contato? *
+							<input list="bestcontact" name="bestcontact" placeholder="Escolher">
+							
+							<datalist id="bestcontact">
+								<option value="E-mail">
+								<option value="Telefone ou Celular">
+								<option value="Whatsapp">
+							</datalist>
+						</label>
 
-					<label>* Campos obrigatórios</label>
+						<label>* Campos obrigatórios</label>
 
-					<label class="submit" for="">
-						<button class="button t2 w_color bg_f_color" type="submit" value="Submit">Enviar</button>
-					</label>
-				</form>
+						<label class="submit" for="">
+							<button class="button t2 w_color bg_fb_color" type="submit" value="Submit" style="padding: 1em 3em;">Enviar</button>
+						</label>
+					</form>
+				</div>
 			</div>
 		</section>
 	</main>
@@ -314,7 +337,7 @@
 		</div>
 		
 		<div class="contato pad-content w_color">
-			<div class="f4" style="margin-top: -55px">
+			<div class="f4">
 				<h4>FALE CONOSCO</h4>
 				<a href="mailto:contato@clixs.com.br">contato@clixs.com.br</a>
 				<a href="https://api.whatsapp.com/send?phone=5511930433311" target="_blank">(11) 93043-3311</a>
@@ -329,10 +352,10 @@
 				</div>
 			</div>
 
-			<div class="f1">
-				<div class="facebook" style="background-color: lightgray; width: 163px; height: 163px"></div>
+			<div class="facebook f1">
+				<img style="background-color: lightgray; width: 163px; height: 163px">
 				
-				<img src="./img/logo_vibryt.png" style="margin-left: 0" alt="">
+				<img src="./img/logo_vibryt.png" alt="">
 			</div>
 		</div>
 
