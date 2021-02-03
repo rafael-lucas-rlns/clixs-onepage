@@ -1,11 +1,13 @@
-window.onscroll = function() {myFunction()};
 
-function myFunction() {
-  if (document.body.scrollTop > 350 || document.documentElement.scrollTop > 350) {
-		document.getElementoById("i-mouseroll").classList.add('hidden');
-		
 
+window.onscroll = function() {onScroll()};
+
+function onScroll() {
+	const mouseroll = document.querySelector(".i-mouseroll img");
+	
+  if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
+		mouseroll.classList.add('hidden');
 	} else {
-
+		mouseroll.classList.remove('hidden');
 	}
 }
