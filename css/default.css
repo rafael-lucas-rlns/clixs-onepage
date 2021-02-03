@@ -97,6 +97,13 @@
 .pad-R {padding-right: calc(21px + 5%);}
 .pad-R-2x {padding-right: calc(21px + 10%);}
 
+.hidden {
+	opacity: 0;
+	visibility: hidden;
+	
+	transition: visibility 0s 0.6s, opacity 0.55s ease;
+} 
+
 body {
 	font-family: "Poppins","Open Sans";
 	color: var(--black);
@@ -163,6 +170,34 @@ input {
 .i-menu-mobile {
 	display: none;
 	}
+
+.i-decoration {
+	position: absolute;
+	height: 89px;
+	width: auto;
+	}
+
+	.i-decoration.D {
+		top: 8vh;
+		left: 3vw;
+		}
+
+
+.i-mouseroll {
+	width: 100%;
+	text-align: center;
+	opacity: 1;
+	visibility: visible;
+
+	transition: opacity 0.55s ease;
+	}
+	.i-mouseroll img {
+		position: fixed;
+		height: 34px;
+		bottom: 55px;
+
+		animation: shake 2.33s infinite;
+		}
 
 
 header {
@@ -248,7 +283,7 @@ header {
 		background-image: url('../img/illustr_detail.png');
 		background-position: left bottom;
 		background-repeat: no-repeat;
-		background-size: 47% auto;
+		background-size: 667px auto;
 
 	} .fst-card.bgB {
 		background-position: left -21% top 400%;
@@ -491,6 +526,7 @@ footer {
 
 	footer .facebook {
 		text-align: center;
+		margin-top: 21px;
 		}
 
 	footer .notes	{
@@ -498,17 +534,6 @@ footer {
 		text-align: center;
 		padding-top: 21px;
 		padding-bottom: 21px;
-		}
-
-.i-decoration {
-	position: absolute;
-	height: 89px;
-	width: auto;
-	}
-
-	.i-decoration.D {
-		top: 8vh;
-		left: 3vw;
 		}
 
 
@@ -531,7 +556,7 @@ footer {
 				box-shadow: 0px 13px 13px #664ffc1d;
 				visibility: hidden;
 				opacity: 0;
-				
+
 				transition: visibility 0s 0.6s, opacity 0.55s ease;
 				} nav.visible {
 					visibility: visible;
@@ -613,3 +638,9 @@ footer {
 			}
 	}
 /* end MOBILE */
+
+@keyframes shake {
+  0% {transform: translateY(0);}
+	50% {transform: translateY(55%);}
+	100% {transform: translateY(0);}
+}

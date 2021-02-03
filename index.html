@@ -15,8 +15,11 @@
 
 	<link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
 	<link rel="stylesheet" href="./css/default.css">
-	<link rel="stylesheet" href="./css/mobile.css">
+
+	<link rel="preload" href="main.js" as="script">
+	<script rel="preload" type="text/javascript" src="./js/onscroll.js"></script>  
 </head>
+
 <body>
 	<header class="pad-content">
 		<a class="logo" href="./index.html">
@@ -75,20 +78,23 @@
 				<div class="illustr-content">
 					<img class="i-bg" src="./img/illustr_girl.png" alt="">
 					
-					<img class="i-decoration" src="./img/circle_decoration.png" alt="" style="
-						top: 8vh;
-						left: 3vw;
-					">
-
 					<img class="i-decoration" src="./img/square_decoration.png" alt="" style="
 						bottom: 3vh;
 						right: 0vw;
+						animation: shake 21s infinite ease-out;
+					">
+
+					<img class="i-decoration" src="./img/circle_decoration.png" alt="" style="
+						top: 8vh;
+						left: 3vw;
+						animation: shake 34s infinite ease-out;
 					">
 				</div>
 
 				<img class="i-decoration" src="./img/square_decoration.png" alt="" style="
 					top: 16vh;
 					left: -1vw;
+					animation: shake 13s infinite ease-out;
 				">
 			</div>
 
@@ -352,14 +358,22 @@
 				</div>
 			</div>
 
-			<div class="facebook f1">
-				<img style="background-color: lightgray; width: 163px; height: 163px">
-				
+			<div class="facebook f2">
+				<script async defer crossorigin="anonymous" src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v9.0&appId=540079526801035" nonce="p59mGfEO"></script>
+				<div class="fb-page"
+				data-href="https://www.facebook.com/clixs.digital/" 
+				data-width="233" 
+				data-height="233" 
+				data-hide-cover="false"
+				data-show-facepile="true"></div>
+
 				<img src="./img/logo_vibryt.png" alt="">
 			</div>
 		</div>
 
 		<div class="notes pad-content">© Copyright 2021 <b>Clixs</b> - Todos os Direitos Reservados</div>
+		
+		<div class="i-mouseroll"><img  src="./img/mouse_roll.png" alt=""></div>
 	</footer>
 </body>
 </html>
