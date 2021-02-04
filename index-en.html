@@ -3,19 +3,37 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
 	<title>Clixs</title>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans" />
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins" />
+	<link rel="shortcut icon" href="https://www.clixs.com.br/images/favicon.ico">
+
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;1,700;800&display=swap" rel="stylesheet">
+	
 	<link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
 
 	<link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
 	<link rel="stylesheet" href="./css/default.css">
+	
+	<link rel="stylesheet" href="./css/onscroll.css">
+	<script rel="preload" type="text/javascript" src="./js/onscroll.js"></script>  
 </head>
+
 <body>
 	<header class="pad-content">
-		<a class="logo" href="./index.html"><img src="./img/logo.png" alt="clixs" height="68%"></a>
+		<a class="logo" href="./index.html">
+			<img src="./img/logo.png" alt="clixs" height="100%">
+		</a>
 		
-		<nav>
+		<a class="i-menu-mobile" href="js:void(0)" onclick="
+			document.getElementById('menu-mobile').classList.toggle('visible');
+			document.querySelector('#menu-mobile > :first-child').classList.remove('active'); 
+			document.getElementById('produtos').classList.remove('active'); 
+		">
+			<i class="las la-bars la-lg"></i>
+		</a>
+		<nav id="menu-mobile">
 			<a href="js:void(0)" onclick="document.getElementById('produtos').classList.toggle('active'); this.classList.toggle('active');">products</a>
 			<a href="#suporte">support</a>
 			<a href="#novidades">news</a>
@@ -48,37 +66,46 @@
 	<main>
 		<section>
 			<div class="xl-card fst-card pad-content">
-				<div class="info-content">
+				<div class="info-content">				
 					<h1 class="f_color">It's time to have your <strong>business online</strong></h1>
 
-					<p class="txt-sm">Everything you need to have your own website, online store, LMS platform or real estate platform in a simplified and professional way.</p>
+					<p>Everything you need to have your own website, online store, LMS platform or real estate platform in a simplified and professional way.</p>
 
 					<a class="button t2 bg_s_color w_color" href="">I WANT!</a>
 				</div>
 
 				<div class="illustr-content">
-					<img src="./img/illustr_girl.png" alt="">
+					<img class="i-bg" src="./img/illustr_girl.png" alt="">
+					
+					<img class="i-decoration" src="./img/square_decoration.png" alt="" style="
+						bottom: 3vh;
+						right: 0vw;
+						animation: shake 21s infinite ease-out;
+					">
+
+					<img class="i-decoration" src="./img/circle_decoration.png" alt="" style="
+						top: 8vh;
+						left: 3vw;
+						animation: shake 34s infinite ease-out;
+					">
 				</div>
 
-				<img class="i-decoration" src="./img/circle_decoration.png" alt="" style="
-					top: 8vh;
-					left: 45vw;
-				">
-
 				<img class="i-decoration" src="./img/square_decoration.png" alt="" style="
-					bottom: 8vh;
-					right: 5vw;
+					top: 16vh;
+					left: -1vw;
+					animation: shake 13s infinite ease-out;
 				">
 			</div>
 
 			<div class="xl-card">
-				<div class="info-content pad-content">
-					<h2 class="f_color"><strong>Customizable and connected solutions</strong> to solve your company's needs
-					</h2>
+				<div class="info-content pad-R-2x">
+					<div>
+						<h2 class="f_color"><strong>Customizable and connected solutions</strong> to solve your company’s needs</h2>
 
-					<p class="txt-sm">Leverage your business on the internet with strategic, connected and versatile solutions.</p>
+						<p>Leverage your business on the internet with strategic, connected and versatile solutions.</p>
 
-					<a class="button t2 bg_s_color w_color" href="">TALK TO EXPERT</a>
+						<a class="button t2 bg_s_color w_color" href="">TALK TO EXPERT</a>
+					</div>
 				</div>
 
 				<div class="illustr-content">
@@ -96,7 +123,7 @@
 						Professional creation of <strong>personalized websites</strong> for each business
 					</h2>
 
-					<p class="txt-sm w_color">
+					<p class="w_color">
 						Your website with layout and development made by specialists, customized to improve your digital presence.
 					</p>
 
@@ -113,10 +140,10 @@
 					<img class="logo" src="./img/logo_clixshop.png" alt="">
 
 					<h2 class="w_color">
-					Impactful and high performance <strong>online catalog, delivery or store</strong> to <strong>sell much more</strong>
+						Impactful and high performance <strong>online catalog, delivery or store</strong> to <strong>sell much more</strong>
 					</h2>
 
-					<p class="txt-sm w_color">
+					<p class="w_color">
 						Create your online store, sales app and interactive catalog and manage your sales in one place: Clixshop.
 					</p>
 
@@ -136,7 +163,7 @@
 						Intelligent <strong>distance learning</strong> and <strong>live streaming platform</strong>
 					</h2>
 
-					<p class="txt-sm w_color">
+					<p class="w_color">
 						Deliver online courses, trainings and classes on your own personalized platform. Stream live videos with unique features.
 					</p>
 
@@ -156,7 +183,7 @@
 						Website for <strong>real estate</strong> with <strong>integrated system</strong>
 					</h2>
 
-					<p class="txt-sm w_color">
+					<p class="w_color">
 						Have a personalized website for your real estate with integrated system to manage and advertise properties in a practical way.
 					</p>
 
@@ -167,31 +194,31 @@
 					<img src="./img/illustr_clixshome.png" alt="">
 				</div>
 			</div>
+		</section>
 
-			<div id="suporte" class="xl-card fst-card bgB">
-				<div class="info-content pad-content">
+		<section>
+			<div id="suporte" class="xl-card fst-card bgB pad-content">
+				<div class="info-content">
 					<h2 class="f_color">
 						Humanized<strong>customer service</strong> and <strong>constant support</strong>
 					</h2>
 
-					<p class="txt-sm">
-						Always count on our experts to solve your technical boubts and ensure that your website, store or platform works all the time, without any delay.
+					<p>
+						Always count on our experts to solve your technical doubts and ensure that your website, store or platform works all the time, without any delay.
 					</p>
 				</div>
 
 				<div class="illustr-content">
 					<img src="./img/illustr_atendimento.png" alt="">
+
+					<img class="i-decoration D D-mobile" src="./img/circle_decoration.png" alt="">
+
+					<img class="i-decoration" src="./img/square_decoration.png" alt="" style="
+						bottom: 3vh;
+						right: 0vw;
+						animation: shake 21s infinite ease-out;
+					">
 				</div>
-
-				<img class="i-decoration" src="./img/circle_decoration.png" alt="" style="
-					top: 13vh;
-					left: 39vw;
-				">
-
-				<img class="i-decoration" src="./img/square_decoration.png" alt="" style="
-					bottom: 8vh;
-					right: 13vw;
-				">
 			</div>
 		</section>
 
@@ -201,30 +228,30 @@
 			<ul class="blog_posts">
 				<li>
 					<div class="img" style="background-image: url('./img/blog_demo_img.jpg');"></div>
-					<h5 class="f_color">Lorem ipsum.</h5>
+					<h4 class="f_color">Lorem ipsum.</h4>
 					<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam.</p>
 				</li>
 
 				<li>
 					<div class="img" style="background-image: url('./img/blog_demo_img.jpg');"></div>
-					<h5 class="f_color">Lorem ipsum.</h5>
+					<h4 class="f_color">Lorem ipsum.</h4>
 					<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam.</p>
 				</li>
 
 				<li>
 					<div class="img" style="background-image: url('./img/blog_demo_img.jpg');"></div>
-					<h5 class="f_color">Lorem ipsum.</h5>
+					<h4 class="f_color">Lorem ipsum.</h4>
 					<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam.</p>
 				</li>
 			</ul>
 
-			<a href=""><i class="las la-plus-circle r_color margin_R8"></i><b>See all</b></a>
+			<a href=""><i class="las la-plus-circle s_color margin_R8"></i><b>See All</b></a>
 		</section>
 
 		<section class="subscribe pad-content" style="background: transparent linear-gradient(99deg, #C400FF 0%, #04A2F8 100%)">
 			<h3 class="w_color">Receive <strong>free and exclusive content</strong> to <strong>enhance your digital presence.</strong></h3>
 			
-			<form action="" method="post">
+			<form action="newsletter.php" method="POST" >
 				<input type="email" placeholder="example@gmail.com">
 
 				<label class="bg_f_color" for="submit">
@@ -234,71 +261,73 @@
 			</form>
 		</section>
 
-		<section id="fale_conosco" class="xl-card pad-content">
-			<div class="info-content">
-				<h2 class="f_color"><b>Empower now your success and digital presence</b></h2>
-				
-				<p>Fill out the form and one of our specialists will contact you.</p>
-				
-				<p>If you prefer, send a message on our WhatsApp or call the number below:</p>
-				
-				<div class="d-flex ">
-					<a class="f1" href="https://api.whatsapp.com/send?phone=5511930433311" target="_blank"><i class="lab la-whatsapp la-2x f_color"></i>(11) 93043-3311</a>
-				</div>
-			</div>
-
-			<div class="form-content">
-				<form action="" method="post">
-					<label>
-						Full Name *
-					  <input type="text" name="fullname" placeholder="Full Name">
-					</label>
-
-					<label>
-						Email *
-						<input type="email" name="email" placeholder="Email">
-					</label>
-
-					<label>
-						Cellphone *
-						<input type="phone" name="phone" placeholder="Cellphone">
-					</label>
-
-					<label>
-						Segment *
-						<input type="text" name="segment" placeholder="Segment">
-					</label>
+		<section >
+			<div id="fale_conosco" class="xl-card pad-content">
+				<div class="info-content pad-R">
+					<h2 class="f_color"><b>Empower now your success and digital presence</b></h2>
 					
-					<label>
-						What do you need? *
-						<input list="whatneed" name="whatneed" placeholder="Choose">
+					<p>Fill out the form and one of our specialists will contact you.</p>
+					
+					<p>If you prefer, send a message on our <b>WhatsApp</b> or call the number below:</p>
+					
+					<div class="d-flex">
+						<a class="f1" href="https://api.whatsapp.com/send?phone=5511930433311" target="_blank"><i class="lab la-whatsapp la-2x f_color"></i>(11) 93043-3311</a>
+					</div>
+				</div>
+
+				<div class="form-content">
+					<form action="new_envia_email.php" method="POST">
+						<label>
+							Full Name *
+							<input type="text" name="fullname" placeholder="Full Name">
+						</label>
+
+						<label>
+							Email *
+							<input type="email" name="email" placeholder="Email">
+						</label>
+
+						<label>
+							Cellphone *
+							<input type="tel" name="phone" placeholder="Cellphone" style="font-weight: bold;">
+						</label>
+
+						<label>
+							Segment *
+							<input type="text" name="segment" placeholder="Segment">
+						</label>
 						
-						<datalist id="whatneed">
-							<option value="Definir">
-							<option value="Definir">
-							<option value="Definir">
-							<option value="Definir">
-							<option value="Definir">
-						</datalist>
-					</label>
+						<label>
+							What do you need? *
+							<input list="whatneed" name="whatneed" placeholder="Choose">
+							
+							<datalist id="whatneed">
+								<option value="Definir">
+								<option value="Definir">
+								<option value="Definir">
+								<option value="Definir">
+								<option value="Definir">
+							</datalist>
+						</label>
 
-					<label>
-						What is the best form of contact? *
-						<input list="bestcontact" name="bestcontact" placeholder="Choose">
-						
-						<datalist id="bestcontact">
-							<option value="Email">
-							<option value="Phone or Cellphone">
-							<option value="Whatsapp">
-						</datalist>
-					</label>
+						<label>
+							What is the best form of contact? *
+							<input list="bestcontact" name="bestcontact" placeholder="Choose">
+							
+							<datalist id="bestcontact">
+								<option value="Email">
+								<option value="Phone or Cellphone">
+								<option value="Whatsapp">
+							</datalist>
+						</label>
 
-					<label>* Required fields</label>
+						<label>* Required fields</label>
 
-					<label class="submit" for="">
-						<button class="button t2 w_color bg_f_color" type="submit" value="Submit">Send</button>
-					</label>
-				</form>
+						<label class="submit" for="">
+							<button class="button t2 w_color bg_fb_color" type="submit" value="Submit" style="padding: 1em 3em;">Send</button>
+						</label>
+					</form>
+				</div>
 			</div>
 		</section>
 	</main>
@@ -311,28 +340,32 @@
 		</div>
 		
 		<div class="contato pad-content w_color">
-			<div class="f4" style="margin-top: -55px">
+			<div class="f4">
 				<h4>CONTACT US</h4>
 				<a href="mailto:contato@clixs.com.br">contact@clixs.com.br</a>
 				<a href="https://api.whatsapp.com/send?phone=5511930433311" target="_blank">(11) 93043-3311</a>
 
 				<div class="parceiros">
 					<img src="./img/logo_google.png" alt="" style="height: 42px">
-					<img src="./img/logo_caasp.png" alt="">
-					<img src="./img/logo_ecommerce.png" alt="" style="height: 34px">
-					<img src="./img/logo_sebrae.png" alt="">
-					<img src="./img/logo_abcomm.png" alt="">
 				</div>
 			</div>
 
-			<div class="f1">
-				<div class="facebook" style="background-color: lightgray; width: 163px; height: 163px"></div>
-				
-				<img src="./img/logo_vibryt.png" style="margin-left: 0" alt="">
+			<div class="facebook f2">
+				<script async defer crossorigin="anonymous" src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v9.0&appId=540079526801035" nonce="p59mGfEO"></script>
+				<div class="fb-page"
+				data-href="https://www.facebook.com/clixs.digital/" 
+				data-width="233" 
+				data-height="233" 
+				data-hide-cover="false"
+				data-show-facepile="true"></div>
+
+				<img src="./img/logo_vibryt.png" alt="">
 			</div>
 		</div>
 
-		<div class="notes pad-content">© Copyright 2021 <b>Clixs</b> - All Rights Reserved</div>
+		<div class="notes pad-content">© Copyright 2021 <b>Clixs</b> - Todos os Direitos Reservados</div>
+		
+		<div class="i-mouseroll"><img src="./img/mouse_roll.png" alt=""></div>
 	</footer>
 </body>
 </html>

@@ -1,5 +1,3 @@
-
-
 window.onscroll = function() {onScroll()};
 
 function onScroll() {

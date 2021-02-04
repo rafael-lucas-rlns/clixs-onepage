@@ -175,17 +175,18 @@ input {
 	.i-decoration.D {
 		top: 8vh;
 		left: 3vw;
+		animation: shake 34s infinite ease-out;
 		}
 
 
 .i-mouseroll {
 	width: 100%;
 	text-align: center;
-	
-	opacity: 1;
-	visibility: visible;
+
 	transition: opacity 0.55s ease;
-	}
+	} .i-mouseroll.hidden {
+		opacity: 0;
+		}
 
 	.i-mouseroll img {
 		position: fixed;
@@ -194,12 +195,6 @@ input {
 		
 		animation: shake 2.33s infinite;
 		}
-
-.hidden {
-	opacity: 0;
-	visibility: hidden;
-	transition: opacity 0.55s ease, visibility 0s 0.6s;
-	}
 
 
 header {
@@ -459,7 +454,7 @@ header {
 			}
 		
 		.subscribe form label[for="submit"] {
-			padding: 13px 13px 13px 15px;
+			padding: 13px 13px 12px 15px;
 			cursor: pointer;
 			margin-left: -53px;
 			
@@ -572,7 +567,7 @@ footer {
 				display: grid;
 				top: 79px;
 				left: unset;
-				right: 215px;
+				right: 161px;
 				padding: unset;
 				}
 

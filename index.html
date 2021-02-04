@@ -15,8 +15,8 @@
 
 	<link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
 	<link rel="stylesheet" href="./css/default.css">
-
-	<link rel="preload" href="main.js" as="script">
+	
+	<link rel="stylesheet" href="./css/onscroll.css">
 	<script rel="preload" type="text/javascript" src="./js/onscroll.js"></script>  
 </head>
 
@@ -218,6 +218,7 @@
 					<img class="i-decoration" src="./img/square_decoration.png" alt="" style="
 						bottom: 3vh;
 						right: 0vw;
+						animation: shake 21s infinite ease-out;
 					">
 				</div>
 			</div>
@@ -252,7 +253,7 @@
 		<section class="subscribe pad-content" style="background: transparent linear-gradient(99deg, #C400FF 0%, #04A2F8 100%)">
 			<h3 class="w_color">Receba gratuitamente <strong>conteúdos exclusivos</strong> para <strong>potencializar sua presença digital.</strong></h3>
 			
-			<form action="" method="post">
+			<form action="newsletter.php" method="POST" >
 				<input type="email" placeholder="exemplo@gmail.com">
 
 				<label class="bg_f_color" for="submit">
@@ -279,7 +280,7 @@
 				</div>
 
 				<div class="form-content">
-					<form action="" method="post">
+					<form action="new_envia_email.php" method="POST">
 						<label>
 							Nome Completo *
 							<input type="text" name="fullname" placeholder="Nome Completo">
