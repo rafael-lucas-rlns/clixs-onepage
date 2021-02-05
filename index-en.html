@@ -22,11 +22,11 @@
 
 <body>
 	<header class="pad-content">
-		<a class="logo" href="./index.html">
+		<a class="logo" href="./index-en.html">
 			<img src="./img/logo.png" alt="clixs" height="100%">
 		</a>
 		
-		<a class="i-menu-mobile" href="js:void(0)" 
+		<a class="i-menu-mobile" href="javascript:void(0)" 
 			onclick="
 				document.getElementById('main-menu').classList.toggle('visible');
 				document.querySelector('#main-menu > :first-child').classList.remove('active');
@@ -39,8 +39,10 @@
 		<nav id="main-menu">
 			<a href="javascript:void(0)" 
 				onmouseover="
-					this.classList.add('active');
-					document.getElementById('menu-produtos').classList.add('visible');
+					if(window.innerWidth > 1024) {
+						this.classList.add('active');
+						document.getElementById('menu-produtos').classList.add('visible');
+					}
 				"
 				onclick="
 					this.classList.toggle('active');
