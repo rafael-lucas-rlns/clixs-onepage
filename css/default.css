@@ -206,7 +206,7 @@ header {
 	background-color: var(--white);
 	justify-content: space-between;
 	box-shadow: 0px 3px 13px #664FFC1D;
-	z-index: 1;
+	z-index: 2;
 	}
 
 	.logo {
@@ -222,45 +222,46 @@ header {
 			font-weight: 600;
 			}
 
-	submenu {
-		display: flex;
-		position: fixed;
-		top: 79px;
-		left: 0;
-		right: 0;
-		background-color: var(--white);
-		padding: 68px calc(34px + 5%);
-		box-shadow: 0px 3px 21px #5742FB39;
+submenu {
+	display: flex;
+	position: fixed;
+	top: 79px;
+	left: 0;
+	right: 0;
+	background-color: var(--white);
+	padding: 68px calc(34px + 5%);
+	box-shadow: 0px 3px 21px #5742FB39;
+	z-index: 1;
 
-		opacity: 0;
-		visibility: hidden;
-		transition: visibility 0s 0.6s, opacity 0.55s ease;
+	opacity: 0;
+	visibility: hidden;
+	transition: visibility 0s 0.6s, opacity 0.55s ease;
 
-		} submenu.active {
-			visibility: visible;
-			opacity: 1;
+	} submenu.visible {
+		visibility: visible;
+		opacity: 1;
 
-			transition: opacity 0.55s ease;
-			}
+		transition: opacity 0.55s ease;
+		}
 
-		submenu > * {
-			flex: 1;
-			margin: 0 20px;
-			}
+	submenu > * {
+		flex: 1;
+		margin: 0 20px;
+		}
 
-			submenu i.las {
-				display: flex;
-				align-items: center;
-				font-weight: bold;
-				} 
+		submenu i.las {
+			display: flex;
+			align-items: center;
+			font-weight: bold;
+			} 
 
-				submenu i::before {
-					padding-right: 8px;
-					}
-
-			submenu p {
-				padding-left: 2em;
+			submenu i::before {
+				padding-right: 8px;
 				}
+
+		submenu p {
+			padding-left: 2em;
+			}
 
 .xl-card {
 	display: flex;
@@ -540,8 +541,8 @@ footer {
 			display: unset;
 			} 
 
-
 		header{
+			z-index: 1;
 			}
 
 			nav {
@@ -556,6 +557,7 @@ footer {
 				opacity: 0;
 
 				transition: visibility 0s 0.6s, opacity 0.55s ease;
+				
 				} nav.visible {
 					visibility: visible;
 					opacity: 1;

@@ -26,42 +26,59 @@
 			<img src="./img/logo.png" alt="clixs" height="100%">
 		</a>
 		
-		<a class="i-menu-mobile" href="js:void(0)" onclick="
-			document.getElementById('menu-mobile').classList.toggle('visible');
-			document.querySelector('#menu-mobile > :first-child').classList.remove('active'); 
-			document.getElementById('produtos').classList.remove('active'); 
-		">
+		<a class="i-menu-mobile" href="js:void(0)" 
+			onclick="
+				document.getElementById('main-menu').classList.toggle('visible');
+				document.querySelector('#main-menu > :first-child').classList.remove('active');
+				document.getElementById('menu-produtos').classList.remove('visible');
+			"
+		>
 			<i class="las la-bars la-lg"></i>
 		</a>
-		<nav id="menu-mobile">
-			<a href="js:void(0)" onclick="document.getElementById('produtos').classList.toggle('active'); this.classList.toggle('active');">produtos</a>
-			<a href="#suporte">suporte</a>
-			<a href="#novidades">novidades</a>
-			<a class="button f_color" href="#fale_conosco">fale conosco</a>
+
+		<nav id="main-menu">
+			<a href="javascript:void(0)" 
+				onmouseover="
+					this.classList.add('active');
+					document.getElementById('menu-produtos').classList.add('visible');
+				"
+				onclick="
+					this.classList.toggle('active');
+					document.getElementById('menu-produtos').classList.toggle('visible');
+				"
+			> produtos </a>
+			<a href="#suporte"> suporte </a>
+			<a href="#novidades"> novidades </a>
+			<a class="button f_color" href="#fale_conosco"> fale conosco </a>
 		</nav>
-
-		<submenu id="produtos" class="txt-sm">
-			<a href="#clixsite">
-				<i class="las la-mouse-pointer la-lg f_color txt-md"><span class="b_color">clix</span>site</i>
-				<p>Sites profissionais e personalizados</p>
-			</a>
-
-			<a href="#clixshop">
-				<i class="las la-shopping-bag la-lg s_color txt-md"><span class="b_color">clix</span>shop</i>
-				<p>Loja virtual catálogo de produtos e aplicativo de vendas</p>
-			</a>
-
-			<a href="#clixsplay">
-				<i class="las la-play-circle la-lg tw_color txt-md"><span class="b_color">clixs</span>play</i>
-				<p>Plataforma ensino a distância e transmissão ao vivo</p>
-			</a>
-
-			<a href="#clixshome">
-				<i class="las la-play-circle la-lg r_color txt-md"><span class="b_color">clixs</span>home</i>
-				<p>Site integrado com sistema para gerenciamento de imobiliárias</p>
-			</a>
-		</submenu>
 	</header>
+
+	<submenu id="menu-produtos" class="txt-sm" 
+		onmouseleave="
+			this.classList.remove('visible'); 
+			document.querySelector('#main-menu > :first-child').classList.remove('active');
+		">
+
+		<a href="#clixsite">
+			<i class="las la-mouse-pointer la-lg f_color txt-md"><span class="b_color">clix</span>site</i>
+			<p>Sites profissionais e personalizados</p>
+		</a>
+
+		<a href="#clixshop">
+			<i class="las la-shopping-bag la-lg s_color txt-md"><span class="b_color">clix</span>shop</i>
+			<p>Loja virtual catálogo de produtos e aplicativo de vendas</p>
+		</a>
+
+		<a href="#clixsplay">
+			<i class="las la-play-circle la-lg tw_color txt-md"><span class="b_color">clixs</span>play</i>
+			<p>Plataforma ensino a distância e transmissão ao vivo</p>
+		</a>
+
+		<a href="#clixshome">
+			<i class="las la-play-circle la-lg r_color txt-md"><span class="b_color">clixs</span>home</i>
+			<p>Site integrado com sistema para gerenciamento de imobiliárias</p>
+		</a>
+	</submenu>
 	
 	<main>
 		<section>
