@@ -474,21 +474,23 @@ footer {
 	}
 
 	footer .socialmidia {
-		/* background-image: url('../img/bg_footer.jpg');
-		background-position: center bottom;
-		background-repeat: no-repeat;
-		background-size: 100% auto;
-		height: 55vh; */
 		text-align: center;
+		position: relative;
 		}
 
-		.socialmidia a {
-			box-shadow: 0px 3px 6px #5742FB36;
-			border-radius: 50%;
-			background-color: var(--white);
-			padding: 13px;
-			margin: 21px;
+		.socialmidia .buttons {
+			position: absolute;
+			left: 0;
+			right: 0;
 			}
+
+			.socialmidia .buttons a {
+				box-shadow: 0px 3px 6px #5742FB36;
+				border-radius: 50%;
+				background-color: var(--white);
+				padding: 13px;
+				margin: 21px;
+				}
 
 	footer .contato {
 		display: flex;
