@@ -274,10 +274,13 @@ submenu {
 
 	} .xl-card
 		,	.fst-card.bgB {
-		min-height: calc(100vh + 80px);
+		height: calc(100vh + 80px);
+
+		} .xl-card#fale_conosco {
+			max-height: calc(768px - 80px);
 
 	} .fst-card {
-		min-height: calc(100vh - 80px);
+		height: calc(100vh - 80px);
 		background-image: url('../img/illustr_detail.png');
 		background-position: left bottom;
 		background-repeat: no-repeat;
@@ -387,6 +390,7 @@ submenu {
 		justify-content: center;
 		margin: 2em auto;
 		padding: 0;
+		max-width: 1280px;
 
 		} .blog_posts > * {
 			display: block;
