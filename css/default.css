@@ -274,13 +274,13 @@ submenu {
 
 	} .xl-card
 		,	.fst-card.bgB {
-		height: calc(100vh + 80px);
+		min-height: calc(100vh + 80px);
 
 		} .xl-card#fale_conosco {
-			max-height: 768px;
+			min-height: 768px;
 
 	} .fst-card {
-		height: calc(100vh - 80px);
+		min-height: calc(100vh - 80px);
 		background-image: url('../img/illustr_detail.png');
 		background-position: left bottom;
 		background-repeat: no-repeat;
@@ -529,7 +529,12 @@ footer {
 	footer .facebook {
 		text-align: center;
 		margin-top: 21px;
-		}
+
+		} footer .facebook > * {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			}
 
 	footer .notes	{
 		font-family: 'Open Sans';
@@ -600,8 +605,7 @@ footer {
 				margin-top: -21px;
 
 			} .xl-card#fale_conosco .info-content {
-				padding-top: 80px;
-				padding-bottom: 55px;
+				padding: 80px 0 55px 0;
 				}
 
 			.xl-card .illustr-content {
