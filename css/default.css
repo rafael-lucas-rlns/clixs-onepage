@@ -278,6 +278,8 @@ submenu {
 
 		} .xl-card#fale_conosco {
 			min-height: 768px;
+			padding-bottom: 55px;
+    	padding-top: 55px;
 
 	} .fst-card {
 		min-height: calc(100vh - 80px);
@@ -472,11 +474,11 @@ footer {
 	}
 
 	footer .socialmidia {
-		background-image: url('../img/bg_footer.jpg');
+		/* background-image: url('../img/bg_footer.jpg');
 		background-position: center bottom;
 		background-repeat: no-repeat;
 		background-size: 100% auto;
-		height: 55vh;
+		height: 55vh; */
 		text-align: center;
 		}
 
@@ -491,7 +493,7 @@ footer {
 	footer .contato {
 		display: flex;
 		flex-wrap: wrap;
-		margin-top: -3px;			/* shitfix */
+		margin-top: -5px;			/* shitfix */
 		padding-bottom: 55px;
 		background-color: #6253FC;
 		
@@ -605,7 +607,8 @@ footer {
 				margin-top: -21px;
 
 			} .xl-card#fale_conosco .info-content {
-				padding: 80px 0 55px 0;
+				padding-top: 80px;
+				padding-bottom: 55px;
 				}
 
 			.xl-card .illustr-content {
