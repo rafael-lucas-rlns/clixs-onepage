@@ -277,7 +277,7 @@ submenu {
 		height: calc(100vh + 80px);
 
 		} .xl-card#fale_conosco {
-			max-height: calc(768px - 80px);
+			max-height: 768px;
 
 	} .fst-card {
 		height: calc(100vh - 80px);
