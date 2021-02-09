@@ -489,7 +489,7 @@ footer {
 				border-radius: 50%;
 				background-color: var(--white);
 				padding: 13px;
-				margin: 21px;
+				margin: 0 21px;
 				}
 
 	footer .contato {
